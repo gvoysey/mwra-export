@@ -1,0 +1,45 @@
+* MWRA-export
+The [[https://www.mwra.com/biobot/biobotdata.htm][MWRA Wastewater COVID-19 Tracking project]] is an insanely good data source for
+SARS-CoV-2 prevalence in the metro Boston environment.
+
+However, the static graphs aren't very easy to read, and the raw data link given at
+the bottom of the page is a PDF.
+
+This tool provides a simple utility that takes the raw data PDF, extracts the numbers
+in it, and saves them as a CSV for further analysis.
+** What's next?
+I might add plotting functionality with ~seaborn~ or ~plotnine~.  PRs welcome.
+* Install
+#+begin_src python
+pip install git+https://github.com/gvoysey/mwra-export
+#+end_src
+* Use
+#+begin_src text
+Usage: mwra-export [OPTIONS] PDF
+
+  Convert a MWRA BioBot data PDF into a CSV for
+  further analysis.
+
+Arguments:
+  PDF  [required]
+
+Options:
+  --to FILE                       [required]
+  --install-completion [bash|zsh|fish|powershell|pwsh]
+                                  Install
+                                  completion for
+                                  the specified
+                                  shell.
+
+  --show-completion [bash|zsh|fish|powershell|pwsh]
+                                  Show completion
+                                  for the
+                                  specified shell,
+                                  to copy it or
+                                  customize the
+                                  installation.
+
+  --help                          Show this
+                                  message and
+                                  exit.
+#+end_src
